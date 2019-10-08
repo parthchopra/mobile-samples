@@ -88,3 +88,7 @@ CCDrawNode/Screenshots/Thumbs.db
 FruityFalls/FruityFalls/FruityFalls.Android/Assets/Content/Sounds/AndroidObj/
 FruityFalls/FruityFalls/FruityFalls.Android/Assets/Content/Sounds/iOSObj/
 .vscode/settings.json
+
+*.keyInfo
+
+*.keystore
