@@ -18,6 +18,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -31,6 +32,11 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+<AndroidKeyStore>True</AndroidKeyStore>
+<AndroidSigningKeyStore>/Users/pchopra/Projects/parth-mobile-samples/Tasky/Tasky.keystore</AndroidSigningKeyStore>
+<AndroidSigningStorePass>*Sarita1989*</AndroidSigningStorePass>
+<AndroidSigningKeyAlias>Tasky</AndroidSigningKeyAlias>
+<AndroidSigningKeyPass>*Sarita1989*</AndroidSigningKeyPass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
