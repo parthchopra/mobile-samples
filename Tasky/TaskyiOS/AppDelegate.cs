@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using UIKit;
 
 namespace Tasky 
@@ -27,8 +30,11 @@ namespace Tasky
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			// create a new window instance based on the screen size
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
+            AppCenter.Start("ad7624fb-a1d1-4252-a608-cb8ad4b10883",
+                   typeof(Analytics), typeof(Crashes));
+
+            // create a new window instance based on the screen size
+            window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
 			// make the window visible
 			window.MakeKeyAndVisible ();

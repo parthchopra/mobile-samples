@@ -7,6 +7,9 @@ using Tasky.Shared;
 using TaskyAndroid;
 using TaskyAndroid.ApplicationLayer;
 using Android.Content.PM;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter;
 
 namespace TaskyAndroid.Screens 
 {
@@ -19,7 +22,7 @@ namespace TaskyAndroid.Screens
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
 		ScreenOrientation = ScreenOrientation.Portrait)]
 	public class HomeScreen : Activity 
-	{
+	{       
 		TodoItemListAdapter taskList;
 		IList<TodoItem> tasks;
 		Button addTaskButton;
@@ -27,7 +30,10 @@ namespace TaskyAndroid.Screens
 		
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+            AppCenter.Start("56f4eae7-0f3d-4bd3-9bb0-956e16cca9f8",
+                   typeof(Analytics), typeof(Crashes));
+
+            base.OnCreate (bundle);
 
 			// set our layout to be the home screen
 			SetContentView(Resource.Layout.HomeScreen);
